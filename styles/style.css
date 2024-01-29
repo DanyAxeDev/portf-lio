@@ -33,6 +33,16 @@ body{
     color: var(--cor-terciaria);
     text-decoration: none;
 }
+.cabecalho__menu__link::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px var(--cor-hover);
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.cabecalho__menu__link:hover::after{
+    transform: scaleX(1);
+}
 .apresentacao{
     padding: 5% 15%;
     display: flex;
