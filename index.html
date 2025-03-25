@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>Daniel Machado</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/de4c25e5ca.js" crossorigin="anonymous"></script>
@@ -20,9 +20,10 @@
         </nav>
         <button onclick="openNavigation()" class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
         </button>
         <nav class="cabecalho__menu__toggle uianimated bottom">
-            <a href="#" class="cabecalho__menu__link__toggle">Tecnologias e experiências</a>
+            <a href="#tecnologias" class="cabecalho__menu__link__toggle">Tecnologias e experiências</a>
             <a href="#projetos" class="cabecalho__menu__link__toggle">Projetos</a>
             <a href="#sobremim" class="cabecalho__menu__link__toggle">Sobre mim</a>
         </nav>
@@ -56,11 +57,16 @@
         </section>
         <img class="apresentacao__img" src="assets/eu.jpeg" alt="Foto do Daniel Machado">
     </main>
-    <main class="apresentacao uianimated right delay-200" id="projetos">
+    <main class="apresentacao uianimated right delay-100" id="tecnologias">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Tecnologias e experiências</h1>
+        </section>
+    </main>
+    <main class="apresentacao uianimated bottom delay-200" id="projetos">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
             <div class="container__card">
-                <div class="card">
+                <div class="card uianimated left delay-200">
                     <div class="image__card"><img src="assets/eu.jpeg" alt=""></div>
                     <div class="text__card">
                         <p class="titulo__card">Mural de imagens</p>
@@ -71,7 +77,7 @@
                         <button class="link__button"><i class="fa-solid fa-cloud"></i>Site</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card uianimated right delay-200">
                     <div class="image__card"><img src="assets/eu.jpeg" alt=""></div>
                     <div class="text__card">
                         <p class="titulo__card">Mural de imagens</p>
@@ -82,7 +88,7 @@
                         <button class="link__button"><i class="fa-solid fa-cloud"></i>Site</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card uianimated left delay-200">
                     <div class="image__card"><img src="assets/eu.jpeg" alt=""></div>
                     <div class="text__card">
                         <p class="titulo__card">Mural de imagens</p>
@@ -96,14 +102,14 @@
             </div>
         </section>
     </main>
-    <main class="apresentacao uianimated delay-100" id="sobremim">
+    <main class="apresentacao uianimated right delay-100" id="sobremim">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Sobre mim</h1>
-            <p class="apresentacao__conteudo__texto">Me interessei pela área de programação em um trabalho que tive como jovem aprendiz, no qual eu realizava muitas tarefas repetitivas, e percebi que elas poderiam ser automatizadas.
+            <p class="apresentacao__conteudo__texto uianimated left delay-100">Me interessei pela área de programação em um trabalho que tive como jovem aprendiz, no qual eu realizava muitas tarefas repetitivas, e percebi que elas poderiam ser automatizadas.
             </p>
-            <p class="apresentacao__conteudo__texto">Desde então, entrei no curso de Analise e Desenvolvimento de Sistemas e estou estudando para me tornar um desenvolvedor FullStack.</p>
-            <p class="apresentacao__conteudo__texto">Sou persistente, disciplinado, estou sempre procurando me desenvolver e tentando fazer o meu melhor de forma rápida e criativa.</p>
-            <p class="apresentacao__conteudo__texto">Quero ganhar experiência na área de tecnologia, e conciliar o conhecimento teórico que estou aprendendo, com o conhecimento prático que o trabalho possa me proporcionar.</p>
+            <p class="apresentacao__conteudo__texto uianimated right delay-100">Desde então, entrei no curso de Analise e Desenvolvimento de Sistemas e estou estudando para me tornar um desenvolvedor FullStack.</p>
+            <p class="apresentacao__conteudo__texto uianimated left delay-100">Sou persistente, disciplinado, estou sempre procurando me desenvolver e tentando fazer o meu melhor de forma rápida e criativa.</p>
+            <p class="apresentacao__conteudo__texto uianimated right delay-100">Quero ganhar experiência na área de tecnologia, e conciliar o conhecimento teórico que estou aprendendo, com o conhecimento prático que o trabalho possa me proporcionar.</p>
         </section>
     </main>
     <footer class="rodape">
@@ -111,6 +117,7 @@
     </footer>
     <script src="js/animation.js"></script>
     <script src="js/toggleButton.js"></script>
+    <script src="js/jquery.min.js"></script>
 </body>
 
 </html>
