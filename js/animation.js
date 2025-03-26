@@ -4,7 +4,7 @@ function uianimated() {
     for (var i = 0; i < uianimateds.length; i++) {
         var windowheight = window.innerHeight;
         var uianimatedtop = uianimateds[i].getBoundingClientRect().top;
-        var uianimatedpoint = 100;
+        var uianimatedpoint = 225;
 
         if (uianimatedtop < windowheight - uianimatedpoint) {
             uianimateds[i].classList.add('active');
