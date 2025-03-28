@@ -80,16 +80,13 @@ body{
 .apresentacao__links{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
+    width: 80%;
 }
 .apresentacao__links__navegacao{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid var(--cor-primaria);
-    width: 100%;
     text-align: center;
     border-radius: 20rem;
     padding: 1rem;
@@ -195,6 +192,7 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 1rem 0 0 1rem;
+    overflow: hidden;
 }
 
 .card__text__button{
@@ -300,12 +298,34 @@ body{
 .daniel__card__titulo{
     font-size: 1.9rem;
     font-family: var(--fonte-primaria);
+    font-weight: 700;
 }
 
 .daniel__card__texto{
     font-size: 1rem;
     font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.tecnologias__usadas{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tecnologias__usadas p{
+    border: var(--cor-terciaria) solid 1px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: var(--cor-primaria);
     font-weight: 700;
+}
+
+.tecnologias__usadas p:hover{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
 }
 
 @media (max-width: 1344px){
@@ -318,8 +338,8 @@ body{
     .cabecalho__menu{
         justify-content: center;
     }
-    .apresentacao__links__navegacao{
-        width: 60%;
+    .apresentacao__links{
+        width: 70%;
     }
     .apresentacao__img__about{
         width: 40%;
@@ -332,6 +352,43 @@ body{
     }
     .daniel__card{
         width: 60%;
+    }
+}
+
+@media (max-width: 1230px){
+    .container__card{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    
+    .card{
+        flex-direction: column;
+        border-radius: 1rem;
+    }
+    
+    .image__card img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 1rem 0 0;
+        border: 0;
+    }
+    
+    .card__text__button{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--cor-hover);
+        border: 0;
+        border-radius: 0 0 1rem 1rem;
+        max-height: 100%;
+    }
+    .buttom__card{
+        border-radius: 1rem;
+    }
+    .tecnologias__usadas p{
+        background-color: var(--cor-terciaria);
+        color: var(--cor-primaria);
     }
 }
 
@@ -363,7 +420,6 @@ body{
         text-align: justify;
     }
     .apresentacao__links{
-        flex-direction: row;
         width: 100%;
         gap: 1rem;
     }
@@ -385,38 +441,7 @@ body{
     .daniel__card__texto{
         font-size: 1rem;
         font-family: var(--fonte-secundaria);
-        font-weight: 700;
-    }
-
-    .container__card{
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-    }
-    
-    .card{
-        flex-direction: column;
-        border-radius: 1rem;
-    }
-    
-    .image__card img{
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem 1rem 0 0;
-        border: 0;
-    }
-    
-    .card__text__button{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--cor-hover);
-        border: 0;
-        border-radius: 0 0 1rem 1rem;
-        max-height: 100%;
-    }
-    .buttom__card{
-        border-radius: 1rem;
+        font-weight: 400;
     }
 }
 
