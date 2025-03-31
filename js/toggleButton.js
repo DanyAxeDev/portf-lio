@@ -1,18 +1,16 @@
-function openNavigation() {
+$(function () {
+    $(".menu-toggle").on("click", function () {
+        let menu = $(".cabecalho__menu__toggle");
 
-    const menuToggle = document.querySelector('.cabecalho__menu__toggle');
-    const openIcon = document.querySelector('.menu-toggle i:nth-of-type(1)');
-    const closeIcon = document.querySelector('.menu-toggle i:nth-of-type(2)');
+        if (menu.is(":hidden")) {
+            menu.css("display", "flex").hide().stop().slideDown(400);
+        } else {
+            menu.stop().slideUp(400, function () {
+                menu.css("display", "none");
+            });
+        }
 
-    const currentDisplay = window.getComputedStyle(menuToggle).display;
-
-    if (currentDisplay === "none") {
-        menuToggle.style.display = "flex";
-        openIcon.style.display = "none";
-        closeIcon.style.display = "block";
-    } else {
-        menuToggle.style.display = "none";
-        openIcon.style.display = "";
-        closeIcon.style.display = "none";
-    }
-}
+        let icon = $(this).find("i:first");
+        icon.toggleClass("fa-bars fa-xmark");
+    });
+});
