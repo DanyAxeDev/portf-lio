@@ -334,7 +334,12 @@ body{
 
 .bloco{
     border: var(--cor-terciaria) 2px solid;
-    padding: 5rem;
+    padding: 1rem;
+    background-color: var(--cor-primaria);
+}
+
+.bloco i{
+    font-size: xx-large;
 }
 
 .coluna_1_linha_1{
