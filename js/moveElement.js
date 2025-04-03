@@ -9,10 +9,9 @@ function createFloatingIcon(icon) {
     let div = document.createElement("div");
     div.classList.add("floating-item");
     div.innerHTML = icon;
-    div.style.left = `${getRandomPercentage(10, 90)}%`;
-    div.style.top = `${getRandomPercentage(10, 90)}%`;
+    div.style.left = `${getRandomPercentage(1, 90)}%`;
+    div.style.top = `${getRandomPercentage(1, 90)}%`;
 
-    // Tornar arrastável
     div.addEventListener('mousedown', (event) => {
         let shiftX = event.clientX - div.getBoundingClientRect().left;
         let shiftY = event.clientY - div.getBoundingClientRect().top;

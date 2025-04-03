@@ -13,4 +13,23 @@ $(function () {
         let icon = $(this).find("i:first");
         icon.toggleClass("fa-bars fa-xmark");
     });
+    
+    $(".apresentacao__img").on("click", function(){
+        let foto = $(this).attr("src");
+
+        if (foto === "assets/eu.jpeg") {
+            $(this).attr("src", "assets/danielz.jpeg");
+        } else {
+            $(this).attr("src", "assets/eu.jpeg");
+        }
+    })
+    $(".apresentacao__img__about").on("click", function(){
+        let foto = $(this).attr("src");
+
+        if (foto === "assets/eu 2.jpeg") {
+            $(this).attr("src", "assets/eu ghibli.jpeg");
+        } else {
+            $(this).attr("src", "assets/eu 2.jpeg");
+        }
+    })
 });

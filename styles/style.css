@@ -176,7 +176,7 @@ body{
     gap: 5rem;
 }
 
-.card{
+.project__card{
     display: flex;
 }
 
@@ -372,7 +372,7 @@ body{
     .apresentacao__conteudo{
         width: 100%;
     }
-    .card{
+    .project__card{
         max-width: 100%;
     }
     .daniel__card{
@@ -390,7 +390,7 @@ body{
         gap: 5rem;
     }
     
-    .card{
+    .project__card{
         flex-direction: column;
         border-radius: 1rem;
     }
