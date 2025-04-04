@@ -108,7 +108,7 @@ body{
 }
 
 .apresentacao__img{
-    width: 80%;
+    width: 70%;
     border-radius: 1rem;
     border: solid;
 }
@@ -329,7 +329,7 @@ body{
 .floating-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 
 .floating-item {
@@ -377,9 +377,6 @@ body{
     }
     .daniel__card{
         width: 60%;
-    }
-    .floating-container {
-        height: 50vh;
     }
 }
 
