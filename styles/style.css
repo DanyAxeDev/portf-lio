@@ -353,21 +353,13 @@ body{
     animation: float 3s ease-in-out infinite;
 }
 
-.aviso{
-    position: absolute;
-    top: 10%;
-    left: 95%;
-    font-size: 1.5rem;
-}
-
 .titulo__aviso{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.aviso__mobile{
-    display: none;
+.aviso{
     font-size: 1.5rem;
 }
 
@@ -395,12 +387,6 @@ body{
     }
     .daniel__card{
         width: 60%;
-    }
-    .aviso__mobile{
-        display: block;
-    }
-    .aviso{
-        display: none;
     }
 }
 
