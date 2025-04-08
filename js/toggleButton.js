@@ -23,6 +23,7 @@ $(function () {
             $(this).attr("src", "assets/eu.jpeg");
         }
     })
+
     $(".apresentacao__img__about").on("click", function(){
         let foto = $(this).attr("src");
 
@@ -30,6 +31,43 @@ $(function () {
             $(this).attr("src", "assets/eu ghibli.jpeg");
         } else {
             $(this).attr("src", "assets/eu 2.jpeg");
+        }
+    })
+
+    $(".aviso").on("click", function(){
+        let mensagemDisplay = $(".mensagem__aviso").css("display")
+
+        if(mensagemDisplay === "none"){
+            $(".mensagem__aviso")
+                .stop()
+                .css("display", "block")
+                .css("opacity", 0)
+                .animate({
+                    opacity: 1,
+                    scale: 1
+                }, 500);
+        }else{
+            $(".mensagem__aviso")
+                .animate({
+                    opacity: 0,
+                    scale: 0.1
+                }, 500, function(){
+                    $(this).css("display", "none");
+                });
+        }
+    })
+
+    $(".mensagem__aviso").on("click", function(){
+        let mensagemDisplay = $(this).css("display")
+
+        if(mensagemDisplay === "block"){
+            $(".mensagem__aviso")
+            .animate({
+                opacity: 0,
+                scale: 0.1
+            }, 500, function(){
+                $(this).css("display", "none");
+            });
         }
     })
 });
