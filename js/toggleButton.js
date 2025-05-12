@@ -70,4 +70,17 @@ $(function () {
             });
         }
     })
+
+    $(".daniel__card__buttom").on("click", function () {
+        let conteudoApresentacao = $(".me");
+        let form = $(".entre__em__contato");
+
+        if (conteudoApresentacao.is(":hidden")) {
+            conteudoApresentacao.css("display", "flex");
+            form.css("display", "none");
+        } else {
+            conteudoApresentacao.css("display", "none");
+            form.css("display", "flex");
+        }
+    });
 });

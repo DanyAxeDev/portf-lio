@@ -374,6 +374,27 @@ body{
     z-index: 100;
 }
 
+.entre__em__contato{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.entre__em__contato > form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.entre__em__contato > form > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    font-family: var(--fonte-primaria);
+}
+
 @media (max-width: 1344px){
     .apresentacao{
         flex-direction: column;
