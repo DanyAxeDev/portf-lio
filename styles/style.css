@@ -277,7 +277,8 @@ body{
     margin-top: 1rem;
 }
 
-.daniel__card__buttom{
+.daniel__card__buttom, 
+.form__buttom{
     margin-top: 2rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -289,7 +290,8 @@ body{
     cursor: pointer;
 }
 
-.daniel__card__buttom:hover{
+.daniel__card__buttom:hover,
+.form__buttom:hover{
     background-color: var(--cor-terciaria);
 }
 
@@ -378,6 +380,11 @@ body{
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: var(--cor-hover);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: var(--cor-terciaria) solid 2px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 .entre__em__contato > form{
@@ -389,10 +396,67 @@ body{
 .entre__em__contato > form > div{
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
 }
 
 label{
     font-family: var(--fonte-primaria);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: var(--cor-secundaria) solid 1px;
+  border-radius: 8px;
+  font-size: small;
+  font-family: var(--fonte-primaria);
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--cor-terciaria);
+  background-color: var(--cor-primaria);
+}
+
+input:focus,
+textarea:focus {
+  border: var(--cor-terciaria) solid 1px;
+  box-shadow: 0 0 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--cor-secundaria);
+  font-style: italic;
+  font-size: small;
+  opacity: 40%;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: var(--cor-primaria) 0 0 0px 1000px inset !important;
+  -webkit-text-fill-color: var(--cor-terciaria) !important;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease forwards;
 }
 
 @media (max-width: 1344px){

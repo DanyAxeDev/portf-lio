@@ -1,4 +1,14 @@
 $(function () {
+    function trocarSecao($esconder, $mostrar) {
+        $esconder.fadeOut(400, function () {
+            $mostrar
+                .css({ display: 'block', opacity: 0 })
+                .addClass('slide-in-left')
+                .fadeTo(600, 1, function () {
+                    $(this).removeClass('slide-in-left');
+                });
+        });
+    }
     $(".menu-toggle").on("click", function () {
         let menu = $(".cabecalho__menu__toggle");
 
@@ -13,8 +23,8 @@ $(function () {
         let icon = $(this).find("i:first");
         icon.toggleClass("fa-bars fa-xmark");
     });
-    
-    $(".apresentacao__img").on("click", function(){
+
+    $(".apresentacao__img").on("click", function () {
         let foto = $(this).attr("src");
 
         if (foto === "assets/eu.jpeg") {
@@ -24,7 +34,7 @@ $(function () {
         }
     })
 
-    $(".apresentacao__img__about").on("click", function(){
+    $(".apresentacao__img__about").on("click", function () {
         let foto = $(this).attr("src");
 
         if (foto === "assets/eu 2.jpeg") {
@@ -34,10 +44,10 @@ $(function () {
         }
     })
 
-    $(".aviso").on("click", function(){
+    $(".aviso").on("click", function () {
         let mensagemDisplay = $(".mensagem__aviso").css("display")
 
-        if(mensagemDisplay === "none"){
+        if (mensagemDisplay === "none") {
             $(".mensagem__aviso")
                 .stop()
                 .css("display", "block")
@@ -46,41 +56,42 @@ $(function () {
                     opacity: 1,
                     scale: 1
                 }, 500);
-        }else{
+        } else {
             $(".mensagem__aviso")
                 .animate({
                     opacity: 0,
                     scale: 0.1
-                }, 500, function(){
+                }, 500, function () {
                     $(this).css("display", "none");
                 });
         }
     })
 
-    $(".mensagem__aviso").on("click", function(){
+    $(".mensagem__aviso").on("click", function () {
         let mensagemDisplay = $(this).css("display")
 
-        if(mensagemDisplay === "block"){
+        if (mensagemDisplay === "block") {
             $(".mensagem__aviso")
-            .animate({
-                opacity: 0,
-                scale: 0.1
-            }, 500, function(){
-                $(this).css("display", "none");
-            });
+                .animate({
+                    opacity: 0,
+                    scale: 0.1
+                }, 500, function () {
+                    $(this).css("display", "none");
+                });
         }
     })
 
     $(".daniel__card__buttom").on("click", function () {
         let conteudoApresentacao = $(".me");
         let form = $(".entre__em__contato");
+        let botao = $(this);
 
         if (conteudoApresentacao.is(":hidden")) {
-            conteudoApresentacao.css("display", "flex");
-            form.css("display", "none");
+            trocarSecao(form, conteudoApresentacao);
+            botao.text("Entrar em contato")
         } else {
-            conteudoApresentacao.css("display", "none");
-            form.css("display", "flex");
+            trocarSecao(conteudoApresentacao, form);
+            botao.text("Voltar")
         }
     });
 });
