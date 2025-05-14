@@ -295,8 +295,7 @@ body {
 }
 
 .daniel__card__buttom,
-.form__buttom,
-.back__buttom {
+.form__buttom {
     margin-top: 2rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -309,9 +308,24 @@ body {
 }
 
 .daniel__card__buttom:hover,
-.form__buttom:hover,
-.back__buttom:hover {
+.form__buttom:hover {
     background-color: var(--cor-terciaria);
+}
+
+.back__buttom{
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    border: var(--cor-secundaria) solid 2px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.back__buttom:hover{
+    background-color: var(--cor-hover);
 }
 
 .daniel__card__titulo {
