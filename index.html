@@ -59,11 +59,11 @@
             </div>
             <div class="back">
                 <section class="entre__em__contato uianimated delay-100">
-                    <form action="" method="post">
-                        <input type="text" placeholder="Digite seu nome..." name="nome" id="nome">
-                        <input type="email" placeholder="Digite seu e-mail..." name="email" id="email">
-                        <textarea name="mensagem" placeholder="Digite sua mensagem..." id="mensagem"></textarea>
-                        <button class="form__buttom">Enviar</button>
+                    <form id="contact-form" action="#">
+                        <input type="text" placeholder="Digite seu nome..." name="nome" id="nome" required>
+                        <input type="email" placeholder="Digite seu e-mail..." name="email" id="email" required>
+                        <textarea name="mensagem" placeholder="Digite sua mensagem..." id="mensagem" required></textarea>
+                        <button class="form__buttom" type="submit">Enviar</button>
                     </form>
                     <button class="back__buttom" id="voltar">Voltar</button>
                 </section>
@@ -195,10 +195,11 @@
         <img class="apresentacao__img__about uianimated top delay-100" src="assets/eu 2.jpeg" alt="Foto do daniel">
     </main>
     <footer class="rodape">
-        <p>Developed by Daniel Machado © 2025</p>
+        <p>Developed by <strong>Daniel Machado</strong> © 2025</p>
     </footer>
     <script src="js/animation.js"></script>
     <script src="js/moveElement.js"></script>
+    <script src="js/sendMessage.js"></script>
 </body>
 
 </html>
