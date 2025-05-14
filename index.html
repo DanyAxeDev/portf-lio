@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/de4c25e5ca.js" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/toggleButton.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 </head>
 
 <body>
@@ -29,28 +30,44 @@
             <a href="#sobremim" class="cabecalho__menu__link__toggle">Sobre mim</a>
         </nav>
     </header>
-    <main class="apresentacao uianimated delay-100">
-        <div class="daniel__card">
-            <img class="apresentacao__img" src="assets/eu.jpeg" alt="Foto do daniel">
-            <p class="titulo-destaque daniel__card__titulo">Daniel Machado</p>
-            <p class="daniel__card__texto">Desenvolvedor Fullstack</p>
-            <div class="apresentacao__links">
-                <a class="apresentacao__links__navegacao" href="assets/Daniel Machado CV.pdf"
-                    download="Daniel Machado CV.pdf">
-                    <i class="fa-solid fa-download"></i></i>
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://instagram.com/daniel_axe_boy" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://github.com/DanyAxeDev" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/danielmachadodev/"
-                    target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+    <main class="apresentacao me uianimated delay-100">
+        <div id="card">
+            <div class="front">
+                <div class="daniel__card">
+                    <img class="apresentacao__img" src="assets/eu.jpeg" alt="Foto do daniel">
+                    <p class="titulo-destaque daniel__card__titulo">Daniel Machado</p>
+                    <p class="daniel__card__texto">Desenvolvedor FullStack</p>
+                    <div class="apresentacao__links">
+                        <a class="apresentacao__links__navegacao" href="assets/Daniel Machado CV.pdf"
+                            download="Daniel Machado CV.pdf">
+                            <i class="fa-solid fa-download"></i></i>
+                        </a>
+                        <a class="apresentacao__links__navegacao" href="https://instagram.com/daniel_axe_boy"
+                            target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="apresentacao__links__navegacao" href="https://github.com/DanyAxeDev" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/danielmachadodev/"
+                            target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <button class="daniel__card__buttom">Entre em contato</button>
+                </div>
             </div>
-            <button class="daniel__card__buttom">Entre em contato</button>
+            <div class="back">
+                <section class="entre__em__contato uianimated delay-100">
+                    <form action="" method="post">
+                        <input type="text" placeholder="Digite seu nome..." name="nome" id="nome">
+                        <input type="email" placeholder="Digite seu e-mail..." name="email" id="email">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem..." id="mensagem"></textarea>
+                        <button class="form__buttom">Enviar</button>
+                    </form>
+                    <button class="back__buttom" id="voltar">Voltar</button>
+                </section>
+            </div>
         </div>
         <section class="apresentacao__conteudo me uianimated delay-100">
             <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong
@@ -59,23 +76,6 @@
             <p class="apresentacao__conteudo__texto">Olá! Sou Daniel Machado, desenvolvedor
                 FullStack com especialidade em Spring Boot e React. Vamos
                 conversar?</p>
-        </section>
-        <section class="entre__em__contato uianimated delay-100">
-            <form action="" method="post">
-                <div>
-                    <label for="nome">Nome</label>
-                    <input type="text" placeholder="Digite seu nome..." name="nome" id="nome">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Digite seu e-mail..." name="email" id="email">
-                </div>
-                <div>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" placeholder="Digite sua mensagem..." id="mensagem"></textarea>
-                </div>
-                <button class="form__buttom">Enviar</button>
-            </form>
         </section>
     </main>
     <main class="apresentacao uianimated right delay-100" id="tecnologias">
@@ -87,22 +87,34 @@
                     <i class="fa-solid fa-circle-exclamation fa-beat"></i>
                 </div>
             </div>
-            <p class="apresentacao__conteudo__texto uianimated left delay-100">Possuo domínio de ferramentas para desenvolvimento web, como
-                <strong class="titulo-destaque">HTML</strong>, <strong class="titulo-destaque">CSS</strong> e <strong class="titulo-destaque">Javascript</strong>. Conhecimento em <strong class="titulo-destaque">Node.js</strong> e <strong class="titulo-destaque">Typescript</strong> para Back-End.
-                Além disso, possuo conhecimento sobre Frameworks Javascript, como <strong class="titulo-destaque">jQuery</strong>, <strong class="titulo-destaque">React</strong>, e
-                Frameworks CSS, como <strong class="titulo-destaque">Boostrap</strong> e <strong class="titulo-destaque">Tailwind</strong>.
+            <p class="apresentacao__conteudo__texto uianimated left delay-100">Possuo domínio de ferramentas para
+                desenvolvimento web, como
+                <strong class="titulo-destaque">HTML</strong>, <strong class="titulo-destaque">CSS</strong> e <strong
+                    class="titulo-destaque">Javascript</strong>. Conhecimento em <strong
+                    class="titulo-destaque">Node.js</strong> e <strong class="titulo-destaque">Typescript</strong> para
+                Back-End.
+                Além disso, possuo conhecimento sobre Frameworks Javascript, como <strong
+                    class="titulo-destaque">jQuery</strong>, <strong class="titulo-destaque">React</strong>, e
+                Frameworks CSS, como <strong class="titulo-destaque">Boostrap</strong> e <strong
+                    class="titulo-destaque">Tailwind</strong>.
             </p>
             <p class="apresentacao__conteudo__texto uianimated right delay-100">
                 Possuo domínio em criação de API's
-                Rest utilizando o framework <strong class="titulo-destaque">Spring Boot</strong>. Utilização das dependências <strong class="titulo-destaque">Java JPA</strong>, <strong class="titulo-destaque">Spring Security</strong>, 
-                <strong class="titulo-destaque">Spring Cache</strong>, <strong class="titulo-destaque">Lombok</strong> e <strong class="titulo-destaque">Flyway</strong> para migrations. E também possuo experiência em documentação de API's
+                Rest utilizando o framework <strong class="titulo-destaque">Spring Boot</strong>. Utilização das
+                dependências <strong class="titulo-destaque">Java JPA</strong>, <strong class="titulo-destaque">Spring
+                    Security</strong>,
+                <strong class="titulo-destaque">Spring Cache</strong>, <strong class="titulo-destaque">Lombok</strong> e
+                <strong class="titulo-destaque">Flyway</strong> para migrations. E também possuo experiência em
+                documentação de API's
                 utilizando <strong class="titulo-destaque">Swagger</strong>.
             </p>
             <p class="apresentacao__conteudo__texto uianimated left delay-100">
-                Experiência com versionamento de código utilizando <strong class="titulo-destaque">Git</strong> e <strong class="titulo-destaque">GitHub</strong>.
+                Experiência com versionamento de código utilizando <strong class="titulo-destaque">Git</strong> e
+                <strong class="titulo-destaque">GitHub</strong>.
             </p>
             <p class="apresentacao__conteudo__texto uianimated right delay-100">
-                Experiência prática com ambiente de trabalho adaptado a metodologias ágeis, como <strong class="titulo-destaque">Scrum</strong>.
+                Experiência prática com ambiente de trabalho adaptado a metodologias ágeis, como <strong
+                    class="titulo-destaque">Scrum</strong>.
             </p>
         </section>
         <div class="floating-container" id="container">
@@ -132,8 +144,10 @@
                             </div>
                         </div>
                         <div class="buttom__card">
-                            <a href=""><button class="repository__button"><i class="fa-brands fa-github"></i>Repositório</button></a>
-                            <a href=""><button class="link__button"><i class="fa-solid fa-eye"></i></i>Visualizar</button></a>
+                            <a href=""><button class="repository__button"><i
+                                        class="fa-brands fa-github"></i>Repositório</button></a>
+                            <a href=""><button class="link__button"><i
+                                        class="fa-solid fa-eye"></i></i>Visualizar</button></a>
                         </div>
                     </div>
                 </div>
@@ -142,7 +156,8 @@
                     <div class="card__text__button">
                         <div class="text__card">
                             <p class="titulo__card titulo-destaque">Decodificador de texto</p>
-                            <p class="descricao__card">Uma aplicação simples que serve para codificar e decodificar mensagens.</p>
+                            <p class="descricao__card">Uma aplicação simples que serve para codificar e decodificar
+                                mensagens.</p>
                             <div class="tecnologias__usadas">
                                 <p>HTML</p>
                                 <P>CSS</P>
@@ -150,8 +165,11 @@
                             </div>
                         </div>
                         <div class="buttom__card">
-                            <a href="https://github.com/DanyAxeDev/Challenge-1---Oracle-One" target="_blank"><button class="repository__button"><i class="fa-brands fa-github"></i>Repositório</button></a>
-                            <a href="https://danyaxedev.github.io/Challenge-1---Oracle-One/" target="_blank"><button class="link__button"><i class="fa-solid fa-eye"></i></i>Visualizar</button></a>
+                            <a href="https://github.com/DanyAxeDev/Challenge-1---Oracle-One" target="_blank"><button
+                                    class="repository__button"><i
+                                        class="fa-brands fa-github"></i>Repositório</button></a>
+                            <a href="https://danyaxedev.github.io/Challenge-1---Oracle-One/" target="_blank"><button
+                                    class="link__button"><i class="fa-solid fa-eye"></i></i>Visualizar</button></a>
                         </div>
                     </div>
                 </div>
@@ -165,7 +183,8 @@
                 um trabalho que tive como jovem aprendiz, no qual eu realizava muitas tarefas repetitivas, e percebi que
                 elas poderiam ser automatizadas.
             </p>
-            <p class="apresentacao__conteudo__texto uianimated right delay-100">Desde então, entrei e me formei no curso de Analise
+            <p class="apresentacao__conteudo__texto uianimated right delay-100">Desde então, entrei e me formei no curso
+                de Analise
                 e Desenvolvimento de Sistemas e estou estudando para me tornar um desenvolvedor FullStack.</p>
             <p class="apresentacao__conteudo__texto uianimated left delay-100">Sou persistente, disciplinado, estou
                 sempre procurando me desenvolver e tentando fazer o meu melhor de forma rápida e criativa.</p>
@@ -181,4 +200,5 @@
     <script src="js/animation.js"></script>
     <script src="js/moveElement.js"></script>
 </body>
+
 </html>

@@ -1,14 +1,7 @@
 $(function () {
-    function trocarSecao($esconder, $mostrar) {
-        $esconder.fadeOut(400, function () {
-            $mostrar
-                .css({ display: 'block', opacity: 0 })
-                .addClass('slide-in-left')
-                .fadeTo(600, 1, function () {
-                    $(this).removeClass('slide-in-left');
-                });
-        });
-    }
+    $("#card").flip({
+        trigger: 'manual'
+    });
     $(".menu-toggle").on("click", function () {
         let menu = $(".cabecalho__menu__toggle");
 
@@ -23,16 +16,6 @@ $(function () {
         let icon = $(this).find("i:first");
         icon.toggleClass("fa-bars fa-xmark");
     });
-
-    $(".apresentacao__img").on("click", function () {
-        let foto = $(this).attr("src");
-
-        if (foto === "assets/eu.jpeg") {
-            $(this).attr("src", "assets/danielz.jpeg");
-        } else {
-            $(this).attr("src", "assets/eu.jpeg");
-        }
-    })
 
     $(".apresentacao__img__about").on("click", function () {
         let foto = $(this).attr("src");
@@ -82,16 +65,10 @@ $(function () {
     })
 
     $(".daniel__card__buttom").on("click", function () {
-        let conteudoApresentacao = $(".me");
-        let form = $(".entre__em__contato");
-        let botao = $(this);
-
-        if (conteudoApresentacao.is(":hidden")) {
-            trocarSecao(form, conteudoApresentacao);
-            botao.text("Entrar em contato")
-        } else {
-            trocarSecao(conteudoApresentacao, form);
-            botao.text("Voltar")
-        }
+        $("#card").flip(true);
     });
+
+    $("#voltar").on("click", function () {
+        $("#card").flip(false);
+    })
 });
