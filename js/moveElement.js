@@ -13,11 +13,6 @@ const container = document.getElementById("container");
 const positions = [];
 const MIN_DISTANCE = 50;
 
-function isMobile() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
-    || window.matchMedia("(pointer: coarse)").matches;
-}
-
 function isTooClose(x, y) {
     return positions.some(pos => {
         const dx = pos.x - x;
@@ -75,10 +70,6 @@ function createFloatingIcon(iconHTML) {
         div.addEventListener('mouseup', () => {
             document.removeEventListener('mousemove', onMouseMove);
         });
-
-        if (!isMobile()) {
-            div.addEventListener('mousedown', onMouseDown);
-        }
 
         div.ondragstart = () => false;
     });
