@@ -32,8 +32,8 @@ Você pode visualizar o portfólio em funcionamento através do GitHub Pages:
 
 Fique à vontade para entrar em contato comigo através das minhas redes sociais:
 
-- [LinkedIn](https://www.linkedin.com/in/daniel-machado-123456789/)
-- [Instagram](https://www.instagram.com/danyaxedev/)
+- [LinkedIn](https://www.linkedin.com/in/daniel-machado-4bb352234/)
+- [Instagram](https://instagram.com/daniel_axe_boy)
 
 ---
 
