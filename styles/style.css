@@ -132,7 +132,7 @@ body {
 }
 
 .apresentacao__img__about {
-    width: 40%;
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: solid;

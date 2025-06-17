@@ -17,16 +17,6 @@ $(function () {
         icon.toggleClass("fa-bars fa-xmark");
     });
 
-    $(".apresentacao__img__about").on("click", function () {
-        let foto = $(this).attr("src");
-
-        if (foto === "assets/eu 2.jpeg") {
-            $(this).attr("src", "assets/eu ghibli.jpeg");
-        } else {
-            $(this).attr("src", "assets/eu 2.jpeg");
-        }
-    })
-
     $(".aviso").on("click", function () {
         let mensagemDisplay = $(".mensagem__aviso").css("display")
 
