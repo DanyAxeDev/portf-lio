@@ -133,8 +133,11 @@ body {
 
 .apresentacao__img__about {
     width: 40%;
-    border-radius: 30rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     border: solid;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .menu-toggle {
