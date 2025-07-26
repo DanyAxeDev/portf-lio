@@ -1,7 +1,6 @@
 # Portfólio Pessoal - Daniel Machado
 
-Este é o repositório do meu portfólio pessoal, desenvolvido inicialmente como parte do curso de HTML e CSS da Alura. Tomei a liberdade de realizar melhorias
-e alterações que refletem mais sobre mim e minhas ideias. O objetivo é apresentar minhas habilidades e projetos como desenvolvedor FullStack.
+Este é o repositório do meu portfólio pessoal. O objetivo é apresentar minhas habilidades e projetos como desenvolvedor FullStack.
 
 ## 🧠 Sobre o Projeto
 
