@@ -17,17 +17,21 @@
 <body>
     <header class="cabecalho uianimated bottom">
         <nav class="cabecalho__menu">
-            <a href="#tecnologias" class="cabecalho__menu__link">Tecnologias</a>
-            <a href="#projetos" class="cabecalho__menu__link">Projetos</a>
-            <a href="#sobremim" class="cabecalho__menu__link">Sobre mim</a>
+            <a href="#tecnologias" class="cabecalho__menu__link" data-i18n="nav-technologies">Tecnologias</a>
+            <a href="#projetos" class="cabecalho__menu__link" data-i18n="nav-projects">Projetos</a>
+            <a href="#sobremim" class="cabecalho__menu__link" data-i18n="nav-about">Sobre mim</a>
         </nav>
+        <button id="language-toggle" class="language-toggle" title="Switch to English">
+            <img id="flag-icon" src="assets/brasil.png" alt="Bandeira" class="flag-icon">
+            <span id="lang-text">PT</span>
+        </button>
         <button class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
         </button>
         <nav class="cabecalho__menu__toggle">
-            <a href="#tecnologias" class="cabecalho__menu__link__toggle">Tecnologias</a>
-            <a href="#projetos" class="cabecalho__menu__link__toggle">Projetos</a>
-            <a href="#sobremim" class="cabecalho__menu__link__toggle">Sobre mim</a>
+            <a href="#tecnologias" class="cabecalho__menu__link__toggle" data-i18n="nav-technologies">Tecnologias</a>
+            <a href="#projetos" class="cabecalho__menu__link__toggle" data-i18n="nav-projects">Projetos</a>
+            <a href="#sobremim" class="cabecalho__menu__link__toggle" data-i18n="nav-about">Sobre mim</a>
         </nav>
     </header>
     <main>
@@ -36,8 +40,8 @@
                 <div class="front">
                     <div class="daniel__card">
                         <img class="apresentacao__img" src="assets/eu.jpeg" alt="Foto do daniel">
-                        <p class="titulo-destaque daniel__card__titulo">Daniel Machado</p>
-                        <p class="daniel__card__texto">Desenvolvedor FullStack</p>
+                        <p class="titulo-destaque daniel__card__titulo" data-i18n="card-title">Daniel Machado</p>
+                        <p class="daniel__card__texto" data-i18n="card-subtitle">Desenvolvedor FullStack</p>
                         <div class="apresentacao__links">
                             <a class="apresentacao__links__navegacao" href="assets/Daniel Machado CV.pdf"
                                 download="Daniel Machado CV.pdf">
@@ -56,27 +60,27 @@
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         </div>
-                        <button class="daniel__card__buttom">Entre em contato</button>
+                        <button class="daniel__card__buttom" data-i18n="card-button">Entre em contato</button>
                     </div>
                 </div>
                 <div class="back">
                     <section class="entre__em__contato">
                         <form id="contact-form" action="#">
-                            <input type="text" placeholder="Digite seu nome..." name="nome" id="nome" required>
-                            <input type="email" placeholder="Digite seu e-mail..." name="email" id="email" required>
+                            <input type="text" placeholder="Digite seu nome..." name="nome" id="nome" data-i18n="form-name" required>
+                            <input type="email" placeholder="Digite seu e-mail..." name="email" id="email" data-i18n="form-email" required>
                             <textarea name="mensagem" placeholder="Digite sua mensagem..." id="mensagem"
-                                required></textarea>
-                            <button class="form__buttom" type="submit">Enviar</button>
+                                data-i18n="form-message" required></textarea>
+                            <button class="form__buttom" type="submit" data-i18n="form-submit">Enviar</button>
                         </form>
-                        <button class="back__buttom" id="voltar">Voltar</button>
+                        <button class="back__buttom" id="voltar" data-i18n="form-back">Voltar</button>
                     </section>
                 </div>
             </div>
             <section class="apresentacao__conteudo me uianimated delay-100">
-                <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong
+                <h1 class="apresentacao__conteudo__titulo" data-i18n-title="presentation-title" data-i18n-highlight="presentation-title-highlight">Eleve seu negócio digital a outro nível<strong
                         class="titulo-destaque"> com um desenvolvedor de qualidade!
                     </strong></h1>
-                <p class="apresentacao__conteudo__texto">Olá! Sou Daniel Machado, desenvolvedor
+                <p class="apresentacao__conteudo__texto" data-i18n="presentation-text">Olá! Sou Daniel Machado, desenvolvedor
                     FullStack com especialidade em Spring Boot e React. Vamos
                     conversar?</p>
             </section>
@@ -84,13 +88,13 @@
         <section class="apresentacao uianimated right delay-100" id="tecnologias">
             <section class="apresentacao__conteudo">
                 <div class="titulo__aviso">
-                    <h1 class="apresentacao__conteudo__titulo">Tecnologias</h1>
-                    <p class="mensagem__aviso">Você pode arrastar os ícones!</p>
+                    <h1 class="apresentacao__conteudo__titulo" data-i18n="technologies-title">Tecnologias</h1>
+                    <p class="mensagem__aviso" data-i18n="technologies-drag">Você pode arrastar os ícones!</p>
                     <div class="aviso">
                         <i class="fa-solid fa-circle-exclamation fa-beat"></i>
                     </div>
                 </div>
-                <p class="apresentacao__conteudo__texto uianimated left delay-100">Possuo domínio de ferramentas para
+                <p class="apresentacao__conteudo__texto uianimated left delay-100" data-i18n-tech-1="technologies-text-1,technologies-text-1-cont,technologies-text-1-cont2,technologies-text-1-cont3">Possuo domínio de ferramentas para
                     desenvolvimento web, como
                     <strong class="titulo-destaque">HTML</strong>, <strong class="titulo-destaque">CSS</strong> e
                     <strong class="titulo-destaque">Javascript</strong>. Conhecimento em <strong
@@ -102,7 +106,7 @@
                     Frameworks CSS, como <strong class="titulo-destaque">Boostrap</strong> e <strong
                         class="titulo-destaque">Tailwind</strong>.
                 </p>
-                <p class="apresentacao__conteudo__texto uianimated right delay-100">
+                <p class="apresentacao__conteudo__texto uianimated right delay-100" data-i18n-tech-2="technologies-text-2,technologies-text-2-cont,technologies-text-2-cont2,technologies-text-2-cont3,technologies-text-2-cont4,technologies-text-2-cont5,technologies-text-2-cont6">
                     Possuo domínio em criação de API's
                     Rest utilizando o framework <strong class="titulo-destaque">Spring Boot</strong>. Utilização das
                     dependências <strong class="titulo-destaque">Java JPA</strong>, <strong
@@ -114,11 +118,13 @@
                     documentação de API's
                     utilizando <strong class="titulo-destaque">Swagger</strong>.
                 </p>
-                <p class="apresentacao__conteudo__texto uianimated left delay-100">
+                <p class="apresentacao__conteudo__texto uianimated left delay-100" data-i18n-tech-5="technologies-text-5,technologies-text-5-cont">Utilizei <strong class="titulo-destaque">Docker</strong> para containerizar aplicações, definindo imagens e containers que padronizam o ambiente de execução, facilitam o deploy e tornam o projeto mais portátil e escalável, eliminando conflitos de dependências.</p>
+                <p class="apresentacao__conteudo__texto uianimated right delay-100" data-i18n-tech-6="technologies-text-6,technologies-text-6-cont,technologies-text-6-cont2,technologies-text-6-cont3">Desenvolvimento de aplicações em <strong class="titulo-destaque">Python</strong>, com uso de <strong class="titulo-destaque">Tkinter</strong> para construção de interfaces gráficas e <strong class="titulo-destaque">SQLite3</strong> para armazenamento e manipulação de dados, aplicando conceitos de lógica, organização de código e persistência.</p>
+                <p class="apresentacao__conteudo__texto uianimated left delay-100" data-i18n-tech-3="technologies-text-3,technologies-text-3-cont">
                     Experiência com versionamento de código utilizando <strong class="titulo-destaque">Git</strong> e
                     <strong class="titulo-destaque">GitHub</strong>.
                 </p>
-                <p class="apresentacao__conteudo__texto uianimated right delay-100">
+                <p class="apresentacao__conteudo__texto uianimated right delay-100" data-i18n-tech-4="technologies-text-4">
                     Experiência prática com ambiente de trabalho adaptado a metodologias ágeis, como <strong
                         class="titulo-destaque">Scrum</strong>.
                 </p>
@@ -128,14 +134,14 @@
         </section>
         <section class="apresentacao uianimated bottom delay-200" id="projetos">
             <section class="apresentacao__conteudo">
-                <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
+                <h1 class="apresentacao__conteudo__titulo" data-i18n="projects-title">Projetos</h1>
                 <div class="container__card">
                     <div class="project__card uianimated right delay-200">
                         <div class="image__card"><img src="assets/mural.png" alt=""></div>
                         <div class="card__text__button">
                             <div class="text__card">
-                                <p class="titulo__card titulo-destaque">Mural de imagens</p>
-                                <p class="descricao__card">Uma aplicação que serve como um mural de fotos, realizando a
+                                <p class="titulo__card titulo-destaque" data-i18n="project-1-title">Mural de imagens</p>
+                                <p class="descricao__card" data-i18n="project-1-desc">Uma aplicação que serve como um mural de fotos, realizando a
                                     inserção, e a
                                     exclusão de imagens.
                                 </p>
@@ -152,9 +158,36 @@
                             <div class="buttom__card">
                                 <a href="https://github.com/DanyAxeDev/FrontMural" target="_blank"><button
                                         class="repository__button"><i
-                                            class="fa-brands fa-github"></i>Repositório</button></a>
+                                            class="fa-brands fa-github"></i><span data-i18n="button-repository">Repositório</span></button></a>
                                 <a href="https://mural-geo-dan.vercel.app" target="_blank"><button
-                                        class="link__button"><i class="fa-solid fa-eye"></i></i>Visualizar</button></a>
+                                        class="link__button"><i class="fa-solid fa-eye"></i></i><span data-i18n="button-view">Visualizar</span></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__card uianimated right delay-200">
+                        <div class="image__card"><img src="assets/petConnect.png" alt=""></div>
+                        <div class="card__text__button">
+                            <div class="text__card">
+                                <p class="titulo__card titulo-destaque" data-i18n="project-0-title">PetConnect</p>
+                                <p class="descricao__card" data-i18n-petconnect="project-0-desc,project-0-desc-cont">Uma aplicação para adoção de animais de estimação.
+                                    Realiza a busca por animais disponíveis para adoção, e o cadastro de novos animais. Criado como parte do projeto final do curso de Desenvolvimento FullStack da <strong class="titulo-destaque">+PraTi</strong>.
+                                </p>
+                                <div class="tecnologias__usadas">
+                                    <p>Spring Boot</p>
+                                    <P>Java</P>
+                                    <p>React</p>
+                                    <p>Typescript</p>
+                                    <p>Vite</p>
+                                    <p>Tailwind</p>
+                                    <p>PostgreSQL</p>
+                                </div>
+                            </div>
+                            <div class="buttom__card">
+                                <a href="https://github.com/DanyAxeDev/Projeto_Final_-PraTi" target="_blank"><button
+                                        class="repository__button"><i
+                                            class="fa-brands fa-github"></i><span data-i18n="button-repository">Repositório</span></button></a>
+                                <a href="https://petconnect-wine.vercel.app/" target="_blank"><button
+                                        class="link__button"><i class="fa-solid fa-eye"></i></i><span data-i18n="button-view">Visualizar</span></button></a>
                             </div>
                         </div>
                     </div>
@@ -163,8 +196,8 @@
                             <div class="image__card"><img src="assets/heic.jpg" alt=""></div>
                             <div class="card__text__button">
                                 <div class="text__card">
-                                    <p class="titulo__card titulo-destaque">Conversor de imagens HEIC</p>
-                                    <p class="descricao__card">
+                                    <p class="titulo__card titulo-destaque" data-i18n="project-2-title">Conversor de imagens HEIC</p>
+                                    <p class="descricao__card" data-i18n="project-2-desc">
                                         Um serviço que recebe a base64 de uma imagem HEIC e retorna ela transformada em
                                         jpeg. Utilizado no projeto de mural de fotos
                                     </p>
@@ -176,7 +209,7 @@
                                 <div class="buttom__card">
                                     <a href="https://github.com/DanyAxeDev/HEIConverter" target="_blank"><button
                                             class="repository__button"><i
-                                                class="fa-brands fa-github"></i>Repositório</button></a>
+                                                class="fa-brands fa-github"></i><span data-i18n="button-repository">Repositório</span></button></a>
                                 </div>
                             </div>
                         </div>
@@ -184,8 +217,8 @@
                             <div class="image__card"><img src="assets/webscrapping.jpg" alt=""></div>
                             <div class="card__text__button">
                                 <div class="text__card">
-                                    <p class="titulo__card titulo-destaque">API Web Scrapping Amazon</p>
-                                    <p class="descricao__card">
+                                    <p class="titulo__card titulo-destaque" data-i18n="project-3-title">API Web Scrapping Amazon</p>
+                                    <p class="descricao__card" data-i18n="project-3-desc">
                                         Uma API que realiza um web scrapping na página de produtos da amazon e retorna
                                         os itens.
                                     </p>
@@ -197,7 +230,7 @@
                                 <div class="buttom__card">
                                     <a href="https://github.com/DanyAxeDev/AmazonScrapBack" target="_blank"><button
                                             class="repository__button"><i
-                                                class="fa-brands fa-github"></i>Repositório</button></a>
+                                                class="fa-brands fa-github"></i><span data-i18n="button-repository">Repositório</span></button></a>
                                 </div>
                             </div>
                         </div>
@@ -205,8 +238,8 @@
                             <div class="image__card"><img src="assets/encriptador.jpeg" alt=""></div>
                             <div class="card__text__button">
                                 <div class="text__card">
-                                    <p class="titulo__card titulo-destaque">Decodificador de texto</p>
-                                    <p class="descricao__card">Uma aplicação simples que serve para codificar e
+                                    <p class="titulo__card titulo-destaque" data-i18n="project-4-title">Decodificador de texto</p>
+                                    <p class="descricao__card" data-i18n="project-4-desc">Uma aplicação simples que serve para codificar e
                                         decodificar
                                         mensagens.</p>
                                     <div class="tecnologias__usadas">
@@ -218,10 +251,10 @@
                                 <div class="buttom__card">
                                     <a href="https://github.com/DanyAxeDev/Challenge-1---Oracle-One"
                                         target="_blank"><button class="repository__button"><i
-                                                class="fa-brands fa-github"></i>Repositório</button></a>
+                                                class="fa-brands fa-github"></i><span data-i18n="button-repository">Repositório</span></button></a>
                                     <a href="https://danyaxedev.github.io/Challenge-1---Oracle-One/"
                                         target="_blank"><button class="link__button"><i
-                                                class="fa-solid fa-eye"></i></i>Visualizar</button></a>
+                                                class="fa-solid fa-eye"></i></i><span data-i18n="button-view">Visualizar</span></button></a>
                                 </div>
                             </div>
                         </div>
@@ -230,20 +263,20 @@
         </section>
         <section class="apresentacao uianimated right delay-100" id="sobremim">
             <section class="apresentacao__conteudo">
-                <h1 class="apresentacao__conteudo__titulo">Sobre mim</h1>
-                <p class="apresentacao__conteudo__texto uianimated left delay-100">Me interessei pela área de
+                <h1 class="apresentacao__conteudo__titulo" data-i18n="about-title">Sobre mim</h1>
+                <p class="apresentacao__conteudo__texto uianimated left delay-100" data-i18n="about-text-1">Me interessei pela área de
                     programação em
                     um trabalho que tive como jovem aprendiz, no qual eu realizava muitas tarefas repetitivas, e percebi
                     que
                     elas poderiam ser automatizadas.
                 </p>
-                <p class="apresentacao__conteudo__texto uianimated right delay-100">Desde então, entrei e me formei no
+                <p class="apresentacao__conteudo__texto uianimated right delay-100" data-i18n="about-text-2">Desde então, entrei e me formei no
                     curso
                     de Analise
                     e Desenvolvimento de Sistemas e estou estudando para me tornar um desenvolvedor FullStack.</p>
-                <p class="apresentacao__conteudo__texto uianimated left delay-100">Sou persistente, disciplinado, estou
+                <p class="apresentacao__conteudo__texto uianimated left delay-100" data-i18n="about-text-3">Sou persistente, disciplinado, estou
                     sempre procurando me desenvolver e tentando fazer o meu melhor de forma rápida e criativa.</p>
-                <p class="apresentacao__conteudo__texto uianimated right delay-100">Quero ganhar experiência na área de
+                <p class="apresentacao__conteudo__texto uianimated right delay-100" data-i18n="about-text-4">Quero ganhar experiência na área de
                     tecnologia, e conciliar o conhecimento teórico que estou aprendendo, com o conhecimento prático que
                     o
                     trabalho possa me proporcionar.</p>
@@ -252,8 +285,9 @@
         </section>
     </main>
     <footer class="rodape">
-        <p>Developed by <strong>Daniel Machado</strong> © 2025</p>
+        <p><span data-i18n="footer-text">Developed by</span> <strong>Daniel Machado</strong> © 2025</p>
     </footer>
+    <script src="js/i18n.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/moveElement.js"></script>
     <script src="js/sendMessage.js"></script>
